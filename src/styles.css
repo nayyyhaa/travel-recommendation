@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+:root {
+  --primary-color: rgb(54, 204, 204);
+  --secondary-color: #d9e6f4;
+  --shadow-color: #9ca6b0;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  background-color: var(--secondary-color);
+  overflow-x: hidden;
+}
+
+* {
+  margin: auto;
+}
+footer {
+  background-color: var(--primary-color);
+  width: 100%;
+  padding: 2rem;
+  border-top-left-radius: 1rem;
+}
+nav {
+  background-color: var(--primary-color);
+  width: 100%;
+  padding: 1.5rem;
+  border-bottom-right-radius: 1rem;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+#text {
+  padding: 1rem;
+}
+.button {
+  margin: 2rem;
+  padding: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  background: linear-gradient(white, var(--primary-color));
+  cursor: pointer;
+  box-shadow: -2px 2px 5px var(--shadow-color),
+    2px -2px 4px var(--primary-color);
+}
+.button:hover {
+  background: var(--primary-color);
+  box-shadow: -2px 2px 5px var(--primary-color),
+    2px -2px 4px var(--shadow-color);
+}
+.selectedPlace {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem;
+  background: linear-gradient(to top right, var(--primary-color), white);
+}
+.content {
+  margin: 4rem 2rem;
+  box-shadow: -4px 4px 5px var(--primary-color),
+    4px -4px 4px var(--shadow-color);
+}
+.content:hover {
+  box-shadow: -4px 4px 5px var(--shadow-color),
+    4px -4px 4px var(--primary-color);
+}
+.placeName {
+  font-size: 1.5rem;
+  border: 1px solid black;
+  padding: 0.5rem;
+  background: var(--primary-color);
+  border-top-right-radius: 1rem;
+}
+.placeDescp {
+  font-size: 1rem;
+  background: white;
+  padding: 1rem;
+}

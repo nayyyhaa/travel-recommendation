@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
+import { useState } from "react";
+import destinationsDB from "./destination";
+export default function App() {
+  let destinations = Object.keys(destinationsDB);
+  let [places, setPlaces] = useState("Delhi");
 
-function App() {
+  function btnHandler(destination) {
+    setPlaces(destination);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <nav>Travel with me</nav>
+      <p id="text">
+        This is a vacation destination recommendation app in India.
+      </p>
+      {destinations.map((destination) => (
+        <button
+          className="button"
+          onClick={() => btnHandler(destination)}
+          key={destination}
         >
-          Learn React
-        </a>
-      </header>
+          {" "}
+          {destination}{" "}
+        </button>
+      ))}
+      <div className="selectedPlace">{places}</div>
+      <ul>
+        {destinationsDB[places].map((place) => (
+          <div className="content">
+            <div className="placeName">{place.name}</div>
+            <div className="placeDescp">
+              <strong>Description: </strong>
+              {place.description}
+            </div>
+          </div>
+        ))}
+      </ul>
+      <footer>
+        <p>
+          more games <a href="https://nehagupta.netlify.com">@nehaland</a>
+        </p>
+      </footer>
     </div>
   );
 }
-
-export default App;
