@@ -11,7 +11,7 @@ export default function App() {
 
   return (
     <div>
-      <nav>Travel with me</nav>
+      <nav>🎑Travel Along🎑</nav>
       <p id="text">
         This is a vacation destination recommendation app in India.
       </p>
